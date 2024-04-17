@@ -135,8 +135,8 @@ const questions = [
             "Which of the following efficiency classes represents the fastest growth rate?",
         answers: [
             { text: "O(1)", correct: false },
-            { text: "O(logN)", correct: true },
-            { text: "O(N^2)", correct: false },
+            { text: "O(logN)", correct: false },
+            { text: "O(N^2)", correct: true },
             { text: "O(N)", correct: false },
         ],
     },
