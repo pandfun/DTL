@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./style.css" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Homepage</title>
+        <style>
+            body {
+                font-family: 'Times New Roman', Times, serif;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 0;
+            }
+            header {
+                background-color: #1f2937;
+                color: #fff;
+                padding: 20px;
+                text-align: center;
+            }
+            .container {
+                max-width: 1000px;
+                margin: 20px auto;
+                padding: 0 20px;
+            }
+            .content {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                text-align: justify;
+            }
+            footer {
+                background-color: #333;
+                color: #fff;
+                padding: 20px;
+                text-align: center;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+            }
+
+            .btn {
+                --hue: var(--hue-neutral);
+                border: 1px solid hsl(var(--hue), 100%, 30%);
+                background-color: hsl(var(--hue), 100%, 50%);
+                border-radius: 5px;
+                padding: 5px 10px;
+                color: white;
+                outline: none;
+            }
+
+            .start-btn,
+            .next-btn {
+                font-size: 1.5rem;
+                font-weight: bold;
+                padding: 10px 20px;
+            }
+
+            :root {
+                --hue-neutral: 250;
+                --hue-wrong: 0;
+                --hue-correct: 145;
+            }
+
+            p {
+                font-size: 24px;
+            }
+            .header h1 {
+                padding-right: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="logo">
+                <!-- <img src="Images/logo.svg" alt="random_logo" class="logo-img" /> -->
+                <a href="./index.html">
+                    <p class="logo-txt">DTL</p>
+                </a>
+            </div>
+            <h1>Asymptotic Notations and Basic Efficiency Classes</h1>
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="./graph.html">Graph</a>
+                <a href="./Quiz/quiz.html">Quiz</a>
+            </div>
+        </div>
+        <!-- <header>
+            <h1>Asymptotic Notations and Basic Efficiency Classes</h1>
+        </header> -->
+
+        <div class="container">
+            <div class="content">
+                <h2>
+                    What are Asymptotic Notations and Basic Efficiency Classes?
+                </h2>
+                <br /><br />
+                <p>
+                    Welcome to our website! Here, we explore the world of
+                    asymptotic notation and basic efficiency classes. Asymptotic
+                    notation serves as a powerful mathematical tool, enabling us
+                    to understand how algorithms perform as their input sizes
+                    grow. At the heart of this notation lies Big O, a symbol
+                    representing the upper bound of an algorithm's time
+                    complexity. Through our content, we delve into the
+                    fundamental efficiency classes such as O(1), O(log n), O(n)
+                    and O(n^2). Understanding these classes empowers us to
+                    analyze and optimize algorithms.
+                </p>
+                <br /><br />
+                <p>
+                    Big O, Theta, and Omega notations are vital tools in
+                    algorithm analysis, each providing unique insights into how
+                    functions behave as their inputs grow. Big O notation
+                    (O(f(n))) offers an upper bound on an algorithm's time
+                    complexity, indicating its worst-case performance. Theta
+                    notation (Θ(f(n))) provides a precise characterization of an
+                    algorithm's behavior, encompassing both upper and lower
+                    bounds. Omega notation (Ω(f(n))) offers a lower bound,
+                    denoting the best-case scenario for an algorithm's
+                    performance. Together, these notations help developers
+                    understand and optimize algorithms for efficient solutions
+                    to computational problems.
+                </p>
+                <br /><br /><br />
+                <div
+                    class="btn-container"
+                    style="
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+                    "
+                >
+                    <div class="quiz-link" style="display: inline-block">
+                        <a href="Quiz/quiz.html"
+                            ><button class="start-btn btn">
+                                Try the quiz
+                            </button></a
+                        >
+                    </div>
+                    <div class="quiz-link" style="display: inline-block">
+                        <a href="index.html"
+                            ><button class="start-btn btn">Visualize</button></a
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

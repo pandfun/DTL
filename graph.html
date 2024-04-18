@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="graph.css" />
+        <link rel="stylesheet" href="./style.css" />
+        <title>Function Visualization</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <div class="logo">
+                <!-- <img src="Images/logo.svg" alt="random_logo" class="logo-img" /> -->
+                <a href="./index.html">
+                    <p class="logo-txt">DTL</p>
+                </a>
+            </div>
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="./graph.html">Graph</a>
+                <a href="./Quiz/quiz.html">Quiz</a>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Taking Input Size -->
+            <div class="user-input">
+                <div class="input-size">
+                    <label for="inputSize">
+                        Enter the higher limit (size of input):
+                    </label>
+                    <input
+                        type="number"
+                        id="inputSize"
+                        name="inputSize"
+                        min="1"
+                        value="10"
+                    />
+                </div>
+
+                <br />
+
+                <!-- Taking Step Size -->
+                <div class="step-size">
+                    <label for="stepSize"
+                        >Enter the step size for y-axis ticks:
+                    </label>
+                    <input
+                        type="number"
+                        id="stepSize"
+                        name="stepSize"
+                        min="1"
+                        value="1"
+                    />
+                </div>
+
+                <br />
+
+                <!-- Updates the chart based on the input values -->
+                <button id="updateButton" class="start-btn btn">
+                    Update Chart
+                </button>
+            </div>
+
+            <!-- Checkbox for user to select different functions -->
+            <div class="checkbox">
+                <div>
+                    <input type="checkbox" id="cbLogN" name="cbLogN" checked />
+                    <label for="cbLogN">O(log(n))</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="cbN" name="cbN" checked />
+                    <label for="cbN">O(n)</label>
+                </div>
+
+                <div>
+                    <input
+                        type="checkbox"
+                        id="cbNLogN"
+                        name="cbNLogN"
+                        checked
+                    />
+                    <label for="cbNLogN">O(n log(n))</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="cbN2" name="cbN2" checked />
+                    <label for="cbN2">O(n^2)</label>
+                </div>
+
+                <input type="checkbox" id="cb2pN" name="cb2pN" checked />
+                <label for="cb2pN">O(2^n)</label>
+            </div>
+
+            <!-- Graph -->
+            <div class="graph">
+                <canvas id="myChart" width="800" height="600"></canvas>
+            </div>
+
+            <br />
+
+            <!-- <div class="quiz-link">
+                    <span>Try the quiz</span>
+                    <a href="Quiz/quiz.html"
+                        ><button class="start-btn btn">Play Now</button></a
+                    >
+                </div> -->
+        </div>
+
+        <div class="footer">
+            Team Members: Adarsh Kamath, Aneesh S, Jeevan Raj, Krishna V
+            <br /><br />
+            Design Thinking Lab
+            <br /><br />
+            Department of Information Sceince and Engineering
+            <br />
+            R V College of Engineering
+
+            <br /><br />© 2024 All rights reserved
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
