@@ -1,151 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="./style.css" />
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>My Homepage</title>
-        <style>
-            body {
-                font-family: 'Times New Roman', Times, serif;
-                background-color: #f4f4f4;
-                margin: 0;
-                padding: 0;
-            }
-            header {
-                background-color: #1f2937;
-                color: #fff;
-                padding: 20px;
-                text-align: center;
-            }
-            .container {
-                max-width: 1000px;
-                margin: 20px auto;
-                padding: 0 20px;
-            }
-            .content {
-                background-color: #fff;
-                padding: 20px;
-                border-radius: 8px;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                text-align: justify;
-            }
-            footer {
-                background-color: #333;
-                color: #fff;
-                padding: 20px;
-                text-align: center;
-                position: fixed;
-                bottom: 0;
-                width: 100%;
-            }
 
-            .btn {
-                --hue: var(--hue-neutral);
-                border: 1px solid hsl(var(--hue), 100%, 30%);
-                background-color: hsl(var(--hue), 100%, 50%);
-                border-radius: 5px;
-                padding: 5px 10px;
-                color: white;
-                outline: none;
-            }
+<head>
+    <link rel="stylesheet" href="./style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
 
-            .start-btn,
-            .next-btn {
-                font-size: 1.5rem;
-                font-weight: bold;
-                padding: 10px 20px;
-            }
+        .container {
+            max-width: 70%;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-            :root {
-                --hue-neutral: 250;
-                --hue-wrong: 0;
-                --hue-correct: 145;
-            }
+        h1,
+        h2,
+        h3 {
+            color: #0056b3;
+        }
 
-            p {
-                font-size: 24px;
-            }
-            .header h1 {
-                padding-right: 100px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="header">
-            <div class="logo">
-                <!-- <img src="Images/logo.svg" alt="random_logo" class="logo-img" /> -->
-                <a href="./index.html">
-                    <p class="logo-txt">DTL</p>
-                </a>
-            </div>
-            <h1>Asymptotic Notations and Basic Efficiency Classes</h1>
-            <div class="links">
-                <a href="index.html">Home</a>
-                <a href="./graph.html">Graph</a>
-                <a href="./Quiz/quiz.html">Quiz</a>
-            </div>
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        ul li::before {
+            content: "•";
+            color: #0056b3;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        header {
+            background-color: #1f2937;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .btn {
+            --hue: var(--hue-neutral);
+            border: 1px solid hsl(var(--hue), 100%, 30%);
+            background-color: hsl(var(--hue), 100%, 50%);
+            border-radius: 5px;
+            padding: 5px 10px;
+            color: white;
+            outline: none;
+        }
+
+        .start-btn,
+        .next-btn {
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 10px 20px;
+        }
+
+        :root {
+            --hue-neutral: 250;
+            --hue-wrong: 0;
+            --hue-correct: 145;
+        }
+
+        .header h1 {
+            padding-right: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="./index.html">
+                <p class="logo-txt">DTL</p>
+            </a>
         </div>
-        <!-- <header>
-            <h1>Asymptotic Notations and Basic Efficiency Classes</h1>
-        </header> -->
-
-        <div class="container">
-            <div class="content">
-                <h2>
-                    What are Asymptotic Notations and Basic Efficiency Classes?
-                </h2>
-                <br /><br />
-                <p>
-                    Welcome to our website! Here, we explore the world of
-                    asymptotic notation and basic efficiency classes. Asymptotic
-                    notation serves as a powerful mathematical tool, enabling us
-                    to understand how algorithms perform as their input sizes
-                    grow. At the heart of this notation lies Big O, a symbol
-                    representing the upper bound of an algorithm's time
-                    complexity. Through our content, we delve into the
-                    fundamental efficiency classes such as O(1), O(log n), O(n)
-                    and O(n^2). Understanding these classes empowers us to
-                    analyze and optimize algorithms.
-                </p>
-                <br /><br />
-                <p>
-                    Big O, Theta, and Omega notations are vital tools in
-                    algorithm analysis, each providing unique insights into how
-                    functions behave as their inputs grow. Big O notation
-                    (O(f(n))) offers an upper bound on an algorithm's time
-                    complexity, indicating its worst-case performance. Theta
-                    notation (Θ(f(n))) provides a precise characterization of an
-                    algorithm's behavior, encompassing both upper and lower
-                    bounds. Omega notation (Ω(f(n))) offers a lower bound,
-                    denoting the best-case scenario for an algorithm's
-                    performance. Together, these notations help developers
-                    understand and optimize algorithms for efficient solutions
-                    to computational problems.
-                </p>
-                <br /><br /><br />
-                <div
-                    class="btn-container"
-                    style="
-                        display: flex;
-                        justify-content: space-evenly;
-                        align-items: center;
-                    "
-                >
-                    <div class="quiz-link" style="display: inline-block">
-                        <a href="Quiz/quiz.html"
-                            ><button class="start-btn btn">
-                                Try the quiz
-                            </button></a
-                        >
-                    </div>
-                    <div class="quiz-link" style="display: inline-block">
-                        <a href="index.html"
-                            ><button class="start-btn btn">Visualize</button></a
-                        >
-                    </div>
-                </div>
-            </div>
+        <h1 style="color: white">
+            Asymptotic Notations and Basic Efficiency Classes
+        </h1>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="./graph.html">Graph</a>
+            <a href="./Quiz/quiz.html">Quiz</a>
         </div>
-    </body>
+    </div>
+
+    <div class="container">
+        <h1>Welcome to our website!</h1>
+        <p>
+            Here, we explore the intricate world of asymptotic notation and
+            the fundamental efficiency classes that are essential for
+            algorithm analysis. Asymptotic notation is a powerful
+            mathematical tool that allows us to understand and predict how
+            algorithms perform as their input sizes grow. This understanding
+            is crucial for developing efficient algorithms that can handle
+            large datasets and complex computations.
+        </p>
+
+        <br />
+        <br />
+
+        <h2>The Essence of Asymptotic Notation</h2>
+        <p>
+            At the heart of asymptotic notation lies Big O, a symbol
+            representing the upper bound of an algorithm's time complexity.
+            Big O notation is invaluable for assessing the worst-case
+            performance of an algorithm, providing a clear picture of how it
+            scales. However, this is just one part of the asymptotic
+            notation family. To fully grasp an algorithm's behavior, we must
+            also consider Theta (Θ) and Omega (Ω) notations.
+        </p>
+
+        <br />
+
+        <h3>Big O Notation (O(f(n)))</h3>
+        <p>
+            Big O notation, denoted as O(f(n)), offers an upper bound on an
+            algorithm's time complexity. It describes the worst-case
+            scenario, ensuring that an algorithm will not perform worse than
+            the given function as the input size grows. For instance, if an
+            algorithm is said to run in O(n log n) time, it means that as
+            the input size n increases, the time taken by the algorithm will
+            grow at most proportionally to n log n.
+        </p>
+
+        <br />
+
+        <h3>Theta Notation (Θ(f(n)))</h3>
+        <p>
+            While Big O provides an upper bound, Theta notation, denoted as
+            Θ(f(n)), offers a more precise characterization. It encapsulates
+            both the upper and lower bounds, giving a tight bound on the
+            algorithm's running time. If an algorithm's time complexity is
+            Θ(n^2), it means that for large input sizes, the time taken will
+            grow exactly proportional to n^2. This notation is particularly
+            useful for understanding the average-case performance of an
+            algorithm.
+        </p>
+
+        <br />
+
+        <h3>Omega Notation (Ω(f(n)))</h3>
+        <p>
+            On the other hand, Omega notation, denoted as Ω(f(n)), provides
+            a lower bound on the time complexity. It signifies the best-case
+            scenario for an algorithm's performance. For example, if an
+            algorithm has a time complexity of Ω(n), it means that in the
+            best case, the time taken by the algorithm will grow at least
+            proportionally to n.
+        </p>
+
+        <br /><br />
+
+        <h2>Fundamental Efficiency Classes</h2>
+        <p>
+            Understanding these notations is the first step towards
+            mastering algorithm analysis. Next, we delve into the
+            fundamental efficiency classes that categorize algorithms based
+            on their time complexities:
+        </p>
+        <br />
+        <ul style="padding-left: 20px;">
+            <li>
+                <strong>O(1):</strong> Constant time complexity. The
+                algorithm's performance is independent of the input size.
+                Example: Accessing an element in an array.
+            </li>
+            <li>
+                <strong>O(log n):</strong> Logarithmic time complexity. The
+                algorithm's performance increases logarithmically as the
+                input size grows. Example: Binary search in a sorted array.
+            </li>
+            <li>
+                <strong>O(n):</strong> Linear time complexity. The
+                algorithm's performance grows linearly with the input size.
+                Example: Iterating through an array.
+            </li>
+            <li>
+                <strong>O(n log n):</strong> Linearithmic time complexity. A
+                combination of linear and logarithmic growth. Example:
+                Efficient sorting algorithms like Merge Sort and Quick Sort.
+            </li>
+            <li>
+                <strong>O(n^2):</strong> Quadratic time complexity. The
+                algorithm's performance grows quadratically with the input
+                size. Example: Simple sorting algorithms like Bubble Sort
+                and Insertion Sort.
+            </li>
+        </ul>
+
+        <br/>
+        <p>
+            These efficiency classes help us compare algorithms and choose
+            the most appropriate one for a given problem. By understanding
+            and utilizing asymptotic notation, developers can design
+            algorithms that not only solve problems efficiently but also
+            scale effectively with increasing input sizes.
+        </p>
+    </div>
+
+    <div class="btn-container" style="
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                margin-bottom: 50px;
+            ">
+        <div class="quiz-link" style="display: inline-block">
+            <a href="Quiz/quiz.html"><button class="start-btn btn">Try the quiz</button></a>
+        </div>
+        <div class="quiz-link" style="display: inline-block">
+            <a href="index.html"><button class="start-btn btn">Visualize</button></a>
+        </div>
+    </div>
+</body>
+
 </html>
